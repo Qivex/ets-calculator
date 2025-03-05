@@ -1,0 +1,16 @@
+{
+	"name": "ets-cargo",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"prev": "vite preview --host"
+	},
+	"dependencies": {
+		"vue": "latest"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "latest",
+		"vite": "latest"
+	}
+}

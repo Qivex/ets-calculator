@@ -1,0 +1,213 @@
+/* Font */
+@font-face {
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(/font/rubik-400.woff2);
+}
+
+
+/* Defaults */
+body {
+	background-color: #222;
+	background-image: url(/svg/background.svg);
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Rubik", serif;
+	color: #c8c8c8;
+	overflow-y: scroll;
+}
+
+section {
+	margin-block-end: 32px;
+	max-width: 640px;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-block: 32px 16px;
+}
+
+h1,h2 {
+	text-align: center;
+}
+
+a {
+	color: #fab003;
+	text-decoration: none;
+}
+
+/*
+a::after {
+	display: inline-block;
+	content: "";
+	width: 10px;
+	height: 10px;
+	margin-inline-start: 3px;
+	background-image: url(/svg/link.svg);
+}
+*/
+
+a:visited {
+	color: #d49000;
+}
+
+a:active {
+	color: #d49000;
+}
+
+p {
+	margin: 0;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+code {
+	font-size: 14px;
+	color: #aaa;
+}
+
+:focus-visible {
+	outline: none;
+}
+
+
+/* Button */
+button {
+	font-size: 18px;
+	padding: 9px 16px;
+	border: none;
+	border-radius: 4px;
+	background-color: #393939;
+	line-height: 0;	/* fixes bottom padding */
+	font: inherit;
+	color: inherit;
+}
+
+button:is(:hover,:focus-visible) {
+	color: #fab003;
+}
+
+
+/* Checkbox & Radio Input */
+.custom-checkbox input {
+	position: absolute;	/* Remove from flow */
+	/* Cant use display:none because tabindex will break! */
+	opacity: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.custom-checkbox input + p {
+	display: flex;
+	align-items: center;
+}
+
+.custom-checkbox input + p::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-color: #393939;
+	border: 2px solid #606060;
+	border-radius: 3px;
+	margin-inline-end: 4px;
+}
+
+.custom-checkbox input:checked + p::before {
+	background-image: url(/svg/checkmark.svg);
+}
+
+.custom-checkbox input + p:hover::before {
+	border-color: #c8c8c8;
+}
+
+.custom-checkbox :focus-visible + p::before {
+	border-color: #c8c8c8;
+}
+
+
+/* Text Input */
+input[type=text] {
+	height: 36px;
+	padding: 0;
+	border: none;
+	font-family: "Rubik", serif;
+	text-align: center;
+	color: #c8c8c8;
+	background-color: #383838;
+}
+
+
+/* Slider */
+input[type=range] {
+	height: 36px;
+	margin: 0;
+	appearance: none;
+	background-color: transparent;
+}
+
+::-webkit-slider-thumb {
+	appearance: none;
+	transform: translateY(-9px);
+	width: 32px;
+	height: 20px;
+	border-radius: 2px;
+	background-color: #727272;
+}
+
+::-moz-range-thumb {
+	appearance: none;
+	/* Hack to achieve padding: */
+	width: 42px;	/* Increased width gets clipped, but still affects position */
+	clip-path: path("M5 2 a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-28a2 2 0 0 1-2-2z");
+	height: 20px;
+	border: none;
+	background-color: #727272;
+}
+
+:hover::-webkit-slider-thumb {
+	background-color: #949494;
+}
+
+:hover::-moz-range-thumb {
+	background-color: #949494;
+}
+
+:active::-webkit-slider-thumb {
+	background-color: #d49000;
+}
+
+:active::-moz-range-thumb {
+	background-color: #d49000;
+}
+
+::-webkit-slider-runnable-track {
+	height: 36px;	/* Chrome includes border */
+	padding-inline: 5px;
+	border-radius: 4px;
+	border: 0px solid #383838;
+	border-width: 17px 0px;
+	background-color: #5c5c5c;
+}
+
+::-moz-range-track {
+	height: 2px;	/* Firefox excludes border */
+	/* padding has no effect in Firefox (thumb isnt nested in track) */
+	border-radius: 4px;
+	border: 0px solid #383838;
+	border-width: 17px 0px;
+	background-color: #5c5c5c;
+}
+
+::-moz-range-progress {
+	display: none;
+}

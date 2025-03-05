@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<filter id="pattern">
+			<feTurbulence baseFrequency="0.03" seed="42"/>
+			<feDiffuseLighting>
+				<feDistantLight azimuth="225" elevation="60"/>
+			</feDiffuseLighting>
+		</filter>
+	</defs>
+	<rect width="100%" height="100%" filter="url(#pattern) invert(1) brightness(.1)"/>
+</svg>

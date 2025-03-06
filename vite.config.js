@@ -6,6 +6,7 @@ export default defineConfig({
 	publicDir: "static",
 	build: {
 		assetsDir: "bundle",
+		outDir: "docs"	// For hosting on Github Pages
 	},
 	define: {
 		__BUILD_TIMESTAMP__: Date.now().toString()

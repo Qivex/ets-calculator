@@ -9,7 +9,9 @@
 				@input="onValueSelect"
 			/>
 			<p>{{label}}</p>
-			<img :src="`/svg/urgency-${label.toLowerCase()}.svg`"/>
+			<img v-if="label === 'Normal'" src="/svg/urgency-normal.svg"/>
+			<img v-else-if="label === 'Important'" src="/svg/urgency-important.svg"/>
+			<img v-else-if="label === 'Urgent'" src="/svg/urgency-urgent.svg"/>
 		</label>
 	</div>
 </template>

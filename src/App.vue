@@ -27,7 +27,7 @@
 					<li>Install <a href="https://store.steampowered.com/app/227300" target="_blank">Euro Truck Simulator 2</a></li>
 					<li>Download the <a href="https://modding.scssoft.com/wiki/Documentation/Tools/Game_Archive_Extractor" target="_blank">Official Game Archive Extractor</a></li>
 					<li>Navigate to your game folder and find the <code>.scs</code> files listed below</li>
-					<li>Extract their contents using the extractor by draggin files onto it</li>
+					<li>Extract their contents using the extractor by dragging files onto it</li>
 					<li>Out of all extracted content you only need the trailer and cargo definitons:</li>
 					<ul>
 						<li>Trailer definitions are <code>.sii</code> files inside <code>\def\vehicle\trailer_defs\</code></li>
